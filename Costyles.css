@@ -1,0 +1,275 @@
+html {
+	font-size: 10px;
+	margin:  0;
+}
+
+body {
+    margin:  0;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+  
+  a {
+    text-decoration: none;
+  }
+  
+ul {
+	padding: 0;
+}
+
+   .container {
+    width:1200px;
+    padding: 0 ;
+    margin: 0 auto;
+  } 
+
+h3 {
+	font-size: 1.8rem;
+}
+
+p {
+	font-size: 1.4rem;
+}
+
+  header {
+    height: 80px;
+    width: 100%;
+    background-color: rgba(34, 49, 52, 0.9);
+    position:fixed;
+    top:0;
+    z-index:10;
+  }
+
+.header-container {
+    width: 80%;
+    height: 100%;
+    padding: 0 ;
+    margin: 0 auto;
+
+  }
+  
+.burger-btn {
+	margin: 30px;
+    display: block;
+	float: right;
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.burger-btn i {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    transition: transform .5s, opacity .5s;
+}
+
+.burger-btn i:nth-child(1) {
+    top: 0;
+}
+.burger-btn i:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.burger-btn i:nth-child(3) {
+    bottom: 0;
+}
+
+.burger-btn.show i:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+}
+.burger-btn.show i:nth-child(2) {
+    opacity: 0;
+}
+.burger-btn.show i:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
+}
+
+.main-menue {
+	padding: 0;
+	margin-top: 30px;
+	width: 100%;
+	height: 100%;
+    background-color: rgba(34, 49, 52, 0.9);
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+}
+
+.main-menue.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.category li{
+    cursor: pointer;
+    display: block;
+    padding: 10px 10px;
+    width: 50%;
+    height: 36px;
+    margin:0 auto;
+    margin-top: 20px;
+    line-height: 36px;
+    text-align: center;
+	font-size: 1.4rem;
+}
+
+.category li:hover{
+    cursor: pointer;
+    transition: 1s;
+    border-bottom: 1px solid #fff;
+}
+
+.category a{
+    color:#fff;
+    text-decoration: none;
+}
+  
+  .logo {
+    width: 60px;
+	height: 40px;
+	margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .header-left {
+    float: left;
+  }
+  
+  .header-right {
+    float: right;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.5s;
+  }
+  
+  .header-right:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .header-right a {
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+    display: block;
+  }
+  
+
+    /* コンタクトフォーム */
+th {
+	font-size: 1.4rem;
+}
+td {
+	font-size: 1.4rem;
+}
+
+#formWrap {
+	padding-top: 120px;
+	width:700px;
+	margin:0 auto;
+	color:#555;
+	line-height:120%;
+	font-size:90%;
+}
+table.formTable{
+	width:100%;
+	margin:0 auto;
+	border-collapse:collapse;
+}
+table.formTable td,table.formTable th{
+	border:1px solid #ccc;
+	padding:10px;
+}
+table.formTable th{
+	width:30%;
+	font-weight:normal;
+	background:#efefef;
+	text-align:left;
+}
+/* ローディング画面 */
+
+.start {
+	background: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 9000;
+}
+.start p {
+  color:black;
+  text-align: center;
+  font-size: 4rem;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+  width: 30%;
+  border-bottom: 2px solid black;
+}
+
+
+/*　簡易版レスポンシブ用CSS（必要最低限のみとしています。ブレークポイントも含め自由に設定下さい）　*/
+@media screen and (max-width:572px) {
+#formWrap {
+	width:95%;
+	margin:0 auto;
+}
+table.formTable th, table.formTable td {
+	width:auto;
+	display:block;
+}
+table.formTable th {
+	margin-top:5px;
+	border-bottom:0;
+}
+input[type="text"], textarea {
+	width:80%;
+	padding:5px;
+	font-size:110%;
+	display:block;
+}
+input[type="submit"], input[type="reset"], input[type="button"] {
+	display:block;
+	width:100%;
+	height:40px;
+}
+	
+	.start p {
+	width: 80%;
+	font-size: 4rem;
+  }
+}
+
+  
+  /* フッター */
+  
+  footer {
+    width:100%;
+    height:80px;
+    background-color: #b3aeb5;
+    text-align: center;
+    margin-top: 110px;
+    padding-top:0 ;
+    }
+
+    footer p {
+        color: #fff;
+        font-size: 12px;
+        margin: 0;
+        line-height: 80px;
+        clear: both;
+    }
+  
+  
+ 

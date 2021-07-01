@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>S_A PF</title>
+    <link rel="stylesheet" href="Thstyles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <p class="logo">
+            SA PF
+          </p>
+        </div>
+        <div class="MainMenue">
+          <ul class="MainMenue">
+            <li>
+              <a href="index.html">Top</a>  
+            </li>
+            <li>
+                <a href="About.html">About</a>  
+            </li>
+            <li>
+              <a href="Thought.html">Thought</a>  
+           </li>
+            <li>
+                <a href="Works.html">Works</a>  
+            </li>
+            <li>
+                <a href="Contact.html">Contact</a>  
+            </li>
+        </ul>
+        </div>
+      </div>
+
+        <!-- ローディング -->
+
+    <div class="start">
+      <p>THOUGHT</p>
+    </div>
+
+    <!-- メイン -->
+
+      </header>
+        <div class="introduce-wrapper">
+          <div class="container">
+            <div class="heading">
+              <h2 class="title">design</h2>
+            </div>
+            <div class="persona">
+              <div class="personal">
+                <div class="personal-icon">
+                    <div class="explain">    
+                    <p>
+                      シンプルかつモダンなデザインを心がけます。<br>
+                      頂いたテーマに沿って、ウェブサイトを作っていきます。
+                    </p>
+                      <p >積極的にお客様と相談や提案を重ね、理想とするサイト作りを目指します。</p>
+                    </div>    
+              </div>
+
+              <div class="heading">
+                <h2 class="title">easy to use</h2>
+              </div>
+              <div class="persona">
+                <div class="personal">
+                  <div class="personal-icon">
+                      <div  class="explain">    
+                      <p>
+                       取り扱い易いシンプルな作りを目指します。<br>
+                       なるべくプラグインの使用もせず動作も重くならないように心がけます。
+                      </p>
+                      <p >
+                        メンテナンス性に優れたサイト作りをします。
+                      </p>
+                       
+                      </div>    
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="container">
+            <img src="">
+            <p className='copy-right'>Copyright. Shuto Asada. 2019 All rights reserved.</p>
+          </div>
+        </footer>
+
+        <script>
+          $(function() {
+            setTimeout(function(){
+              $('.start p').fadeIn(1600);
+            },500); 
+            setTimeout(function(){
+              $('.start').fadeOut(500);
+            },2500); 
+          });
+          
+          $(function(){
+              var effect_pos = 300; 
+              var effect_move = 100; 
+              var effect_time = 800; 
+
+              $('.explain').css({
+                  opacity: 0,
+                  transform: 'translateY('+ effect_move +'px)',
+                  transition: effect_time + 'ms'
+              });
+
+              $(window).on('scroll load', function(){
+                  var scroll_top = $(this).scrollTop();
+                  var scroll_btm = scroll_top + $(this).height();
+                  effect_pos = scroll_btm - effect_pos;
+
+                  $('.explain').each( function() {
+                      var this_pos = $(this).offset().top;
+                      if ( effect_pos > this_pos ) {
+                          $(this).css({
+                              opacity: 1,
+                              transform: 'translateY(0)'
+                          });
+             }
+         });
+     });
+});
+
+          $(function(){
+              var effect_pos = 300; 
+              var effect_move = 100; 
+              var effect_time = 800; 
+              
+          $('.title').css({
+               opacity: 0,
+               transform: 'translateY('+ effect_move +'px)',
+               transition: effect_time + 'ms'
+            });
+
+          $(window).on('scroll load', function(){
+                var scroll_top = $(this).scrollTop();
+                var scroll_btm = scroll_top + $(this).height();
+                effect_pos = scroll_btm - effect_pos;
+
+          $('.title').each( function() {
+                var this_pos = $(this).offset().top;
+                if ( effect_pos > this_pos ) {
+           $(this).css({
+               opacity: 1,
+               transform: 'translateY(0)'
+                            });
+             }
+         });
+     });
+});
+
+          </script>
+
+  </body>
+</html>

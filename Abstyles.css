@@ -1,0 +1,573 @@
+html {
+	width: 100%;
+	height: 100%;
+	font-size: 10px;
+	margin:  0;
+	padding: 0;
+}
+body {
+    background: rgba(0,0,0,0.4);
+	font-family: 'Noto Sans JP', sans-serif;
+	margin: 0;
+}
+  
+  a {
+    text-decoration: none;
+	font-size: 1.6rem;
+  }
+
+p {
+	font-size: 1.6rem;
+}
+
+
+
+h3 {
+	font-size: 2.2rem;
+}
+
+  .header-container {
+    width: 80%;
+	height: 100%;
+    padding: 0 ;
+    margin: 0 auto;
+  }
+
+  header {
+    height: 80px;
+    width: 100%;
+    background-color: rgba(34, 49, 52, 0.9);
+    position:fixed;
+    top:0;
+    z-index:10;
+  }
+  
+.burger-btn {
+	margin: 30px;
+    display: block;
+	float: right;
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.burger-btn i {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    transition: transform .5s, opacity .5s;
+}
+
+.burger-btn i:nth-child(1) {
+    top: 0;
+}
+.burger-btn i:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.burger-btn i:nth-child(3) {
+    bottom: 0;
+}
+
+.burger-btn.show i:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+}
+.burger-btn.show i:nth-child(2) {
+    opacity: 0;
+}
+.burger-btn.show i:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
+}
+
+.main-menue {
+	padding: 0;
+	margin-top: 40px;
+	width: 100%;
+	height: 100%;
+    background-color: rgba(34, 49, 52, 0.9);
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+}
+
+.main-menue.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.category li{
+    cursor: pointer;
+    display: block;
+    padding: 10px 10px;
+    width: 50%;
+    height: 36px;
+    margin:0 auto;
+    margin-top: 20px;
+    line-height: 36px;
+    text-align: center;
+	font-size: 1.4rem;
+}
+
+.category li:hover{
+    cursor: pointer;
+    transition: 1s;
+    border-bottom: 1px solid #fff;
+}
+
+.category a{
+    color:#fff;
+    text-decoration: none;
+}
+
+  
+  .logo {
+    width: 60px;
+	height: 40px;
+	margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .header-left {
+    float: left;
+  }
+  
+  .header-right {
+    float: right;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.5s;
+  }
+  
+  .header-right:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .header-right a {
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+    display: block;
+  }
+  
+  .introduce-wrapper {
+    height: 100%;
+	width: 100%;
+    padding-bottom: 80px;
+    background-color: #f7f7f7;
+    text-align: center;
+    margin : 0;
+  }
+.introduce {
+	width: 100%;
+	height: 100%;
+}
+  .heading {
+    padding-top: 150px;
+    padding-bottom: 30px;
+    color: #5f5d60;
+
+  }
+  
+  .heading h2 {
+    font-weight: normal;
+	font-size: 3rem;
+  }
+  
+/*
+	写真　名前
+				*/
+
+  .persona{
+    width:100%;
+    height:100%;
+    margin:0 auto;
+  }
+
+.img_name_address {
+	 width:80%;
+	 height:40%;
+	 margin: 0 auto;
+	 display: flex;
+}
+
+.img_name_address_balance {
+	margin: 0 auto;
+	display: flex;
+}
+
+  .my_img img{
+	margin: auto;
+    width:250px;
+    height:250px;
+    /*border-radius: 100px;*/
+  }
+  
+  .status{
+	margin-left: 120px;
+    text-align: left;
+	  font-size: 1.6rem;
+  }
+
+	dd {
+		font-size: 2rem;
+	}
+
+	dt {
+		font-size: 2rem;
+	}
+
+  .status dt{
+    margin-top: 12px;
+    font-weight: lighter;
+	font-size: 1.4rem;
+  }
+
+  .txt-contents {
+    width: 80%;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #b3aeb5;
+  }
+  
+  .heading h2 {
+    font-weight: normal;
+  }
+
+
+
+/*
+	略歴
+			*/
+ul {
+	padding: 0;
+}
+
+  .remarks{
+	padding-top: 40px;
+    width: 80%;
+	height: 60%;
+	margin: 0 auto;
+	display: flex;
+  }
+
+.biography {
+	padding-top: 80px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.biography ul {
+	margin: 0;
+}
+
+.biography2 {
+	padding-top: 40px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+.biography2 h3 {
+	font-weight: normal;
+	text-align: center;
+	font-size: 2.2rem;
+}
+.biography h3 {
+	font-weight: normal;
+	text-align: center;
+	font-size: 2.2rem;
+}
+
+.biography span {
+	font-size: 1.6rem;
+	line-height: middle;
+}
+
+  .detail{
+    margin-top: 30px;
+  }
+
+.biography-text1 {
+	width: 90%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.biography-text1 ul {
+	list-style: none;
+}
+
+.biography-text2 {
+	text-align: center;
+}
+
+.biography-text2 ul {
+	list-style: none;
+}
+
+
+.biography-heading {
+	font-weight: bold;
+	font-size: 1.8rem;
+	margin-bottom: 10px;
+}
+
+.biography-text {
+	font-size: 1.4rem;
+	margin-bottom: 40px;
+}
+
+  /* ローディング画面 */
+
+.start {
+	background: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 9000;
+}
+.start p {
+	text-align: center;
+  color:black;
+  font-size: 50px;;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+  width: 400px;
+  border-bottom: 2px solid black;
+}
+
+.swiper-container {
+	margin-top: 80px;
+	width: 80%;
+	height: 150px;
+}
+
+.slide-item{
+  
+  background: #fff;
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+
+.SVG {
+	width:100px;
+	height: 120px;
+	margin-top: 15px;
+	margin-left: 30px;
+}
+
+.SVG2 {
+	width:120px;
+	height: 120px;
+	margin-top: 15px;
+	margin-left: 30px;
+}
+
+  /* フッター */
+
+  footer {
+    width:100%;
+    height:80px;
+    background-color: #b3aeb5;
+    text-align: center;
+    }
+
+    footer p {
+        color: #fff;
+        font-size: 12px;
+        margin: 0;
+        line-height: 80px;
+        clear: both;
+    }
+  
+  
+  @media screen and (max-width: 550px) { 
+
+
+
+    body{
+      margin: 0 auto;
+    }  
+
+    header{
+      width:100%;
+    }
+
+    h1{
+      font-size: 2.2rem;
+        }
+    
+    h2{
+      font-size: 2rem;
+    }
+    
+    p{
+      font-size: 1.6rem;
+    }
+
+    .personal{
+      width:  100%;
+    }
+
+    .container{
+      width:100%;
+    }
+
+	  
+	.status{
+	margin: 0 auto;
+    text-align: left;
+	  font-size: 1.4rem;
+ 	}
+	  
+	  .img_name_address {
+	 width:80%;
+	 height:40%;
+	 margin: 0 auto;
+	 display: flex;
+	 flex-direction: column;
+	}
+	  
+	 .img_name_address_balance {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	}
+
+	  
+	.remarks{
+	padding-top: 40px;
+    width: 100%;
+	height: 60%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+  }
+	
+	  .biography {
+		  width: 100%;
+		  height: 100%;
+		  font-size: 1.2rem;
+		  margin-bottom: 40px;
+	  }
+	  
+	.swiper-container {
+	margin-top: 80px;
+	width: 100%;
+	height: 250px;
+	}	
+	  .SVG {
+	width:70px;
+	height: 70px;
+	margin-top: 30px;
+	margin-left: 30px;
+	}
+
+	.SVG2 {
+	width:70px;
+	height: 70px;
+	margin-top: 30px;
+	margin-left: 30px;
+	}
+  }
+
+@media screen and (max-width: 375px) { 
+
+
+
+    body{
+      margin: 0 auto;
+    }  
+
+    header{
+      width:100%;
+    }
+
+    h1{
+      font-size: 2.2rem;
+        }
+    
+    h2{
+      font-size: 2rem;
+    }
+    
+    p{
+      font-size: 1.6rem;
+    }
+
+    .personal{
+      width:  100%;
+    }
+
+    .introduce-wrapper{
+      height:100%;
+    }
+
+    .container{
+      width:100%;
+    }
+
+	.img_name_address {
+	 width:80%;
+	 height:40%;
+	 margin: 0 auto;
+	 display: flex;
+	 flex-direction: column;
+}
+	
+	.remarks{
+	padding-top: 40px;
+    width: 80%;
+	height: 60%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+  }
+	
+	  .biography {
+		  width: 100%;
+		  height: 100%;
+		  font-size: 1.2rem;
+	  }
+	.swiper-container {
+	margin-top: 80px;
+	width: 100%;
+	height: 200px;
+	}
+	
+	.SVG {
+	width:50px;
+	height: 40px;
+	margin-top: 15px;
+	margin-left: 30px;
+	}
+
+	.SVG2 {
+	width:50px;
+	height: 40px;
+	margin-top: 15px;
+	margin-left: 30px;
+	}
+	
+	.start p {
+	width: 80%;
+	font-size: 4rem;
+  }
+  }
